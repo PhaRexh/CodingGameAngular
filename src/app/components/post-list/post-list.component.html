@@ -1,0 +1,21 @@
+<h1>Lista dei Post</h1>
+<div class="container">
+
+    <!-- Mostra il dettaglio come una modale -->
+    <app-post-detail *ngIf="selectedPost" [post]="selectedPost" [user]="selectedUser" (close)="closeDetail()">
+    </app-post-detail>
+
+    <!-- Lista dei Post -->
+    <div *ngFor="let post of posts" class="post-item">
+        <div class="user-avatar" (click)="showPostDetail(post)">
+            {{ getUserInitials(post.userId) }}
+        </div>
+        <div class="post-content">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.body }}</p>
+            <p class="username">pubblicato da:
+                <a [routerLink]="['/user', post.userId]">{{ getUser(post.userId)?.username }}</a>
+            </p>
+        </div>
+    </div>
+</div>

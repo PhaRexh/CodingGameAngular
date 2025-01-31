@@ -1,0 +1,99 @@
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .post-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+    padding: 12px;
+  }
+  
+  .user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+  .post-content {
+    flex: 1;
+  }
+  
+  .post-content h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .post-content p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    color: #333;
+  }
+  
+  .username {
+    font-size: 0.75rem;
+    color: gray;
+  }
+  
+  .post-detail {
+    padding: 15px;
+    border: 2px solid red; /* ✅ Bordo rosso per evidenziare */
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* ✅ Ombreggiatura leggera */
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .post-detail h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: red; /* ✅ Titolo rosso */
+    margin-bottom: 5px;
+  }
+  
+  .post-detail p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .post-detail .author {
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .post-detail button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+  }
+  
+  .post-detail button:hover {
+    background-color: darkred;
+  }

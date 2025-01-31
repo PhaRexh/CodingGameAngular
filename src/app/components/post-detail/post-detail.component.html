@@ -1,0 +1,11 @@
+<div class="modal-overlay" *ngIf="post">
+    <div class="modal-content">
+      <button class="close-btn" (click)="closeDetail()">✖</button>
+      <p class="author">
+        <strong>Post pubblicato da:</strong> {{ user?.name }} alias <strong>{{ user?.username }}</strong>
+      </p>
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.body }}</p>
+    </div>
+  </div>
+  

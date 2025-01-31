@@ -1,0 +1,10 @@
+<div class="user-detail-container">
+    <div class="user-card">
+        <h2>{{ user?.name }}</h2>
+        <p><strong>Username:</strong> {{ user?.username }}</p>
+        <p><strong>Email:</strong> {{ user?.email }}</p>
+        <p><strong>Telefono:</strong> {{ user?.phone }}</p>
+        <p><strong>Azienda:</strong> {{ user?.company?.name }}</p>
+    </div>
+    <a class="back-button" routerLink="/posts">Torna alla lista dei post</a>
+</div>
