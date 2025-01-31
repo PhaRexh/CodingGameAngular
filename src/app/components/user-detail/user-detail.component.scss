@@ -10,21 +10,23 @@
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
   width: 50%;
   max-width: 500px;
+  text-align: left; /* 🔥 Allinea tutto a sinistra */
 }
 
 .user-card h2 {
   color: #d00;
   font-size: 1.8rem;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .user-card p {
   font-size: 1rem;
   color: #333;
   margin: 8px 0;
+  text-align: left;
 }
 
 .back-button {
@@ -36,6 +38,7 @@
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  text-align: center;
 }
 
 .back-button:hover {

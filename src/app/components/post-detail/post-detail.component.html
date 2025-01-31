@@ -1,12 +1,12 @@
 <div class="modal-container">
   <div class="modal-content">
-    <!-- ✅ Header con titolo e bottone di chiusura -->
+    <!-- Header con titolo e bottone di chiusura -->
     <div class="modal-header">
-      <p>{{ user?.name }} alias {{ user?.username }}</p>
+      <p>{{ user?.name }} {{ user?.username }}</p>
       <button type="button" class="btn-close" aria-label="Chiudi" (click)="closeDetail()"></button>
     </div>
 
-    <!-- ✅ Corpo della modale -->
+    <!-- Corpo della modale -->
     <div class="modal-body">
       <h2 class="text-danger fw-bold">{{ post?.title }}</h2>
       <p>{{ post?.body }}</p>

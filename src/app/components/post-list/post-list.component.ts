@@ -13,6 +13,8 @@ import { User } from '../../interfaces/user.interface';
 export class PostListComponent implements OnInit {
   posts: Post[] = [];
   users: User[] = [];
+  filteredPosts: Post[] = [];
+  searchTerm: string = ""; //
   selectedPost?: Post;
   selectedUser?: User;
 
@@ -65,4 +67,17 @@ export class PostListComponent implements OnInit {
   loadUsers() {
     this.userService.getUsers().subscribe(users => this.users = users);
   }
+
+  filterPosts() {
+    this.filteredPosts = this.posts.filter(post => 
+      post.title.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      post.body.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+  }
+
+  resetSearch() {
+    this.searchTerm = ''; // Resetta il campo di ricerca
+    this.filteredPosts = [...this.posts]; // Ripristina tutti i post
+  }
+  
 }

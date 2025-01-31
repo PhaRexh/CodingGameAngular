@@ -9,6 +9,7 @@ import { PostDetailComponent } from './components/post-detail/post-detail.compon
 import { UserAvatarComponent } from './components/user-avatar/user-avatar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { UserDetailComponent } from './components/user-detail/user-detail.compon
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

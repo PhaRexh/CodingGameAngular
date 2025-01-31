@@ -1,4 +1,5 @@
 <h1 class="text-center my-4">Lista dei Post</h1>
+
 <div class="container">
 
   <!-- MODALE DETTAGLIO POST -->
@@ -9,20 +10,25 @@
     (close)="closeDetail()">
   </app-post-detail>
 
+  <div class="d-flex align-items-center mb-3">
+    <div class="flex-grow-1">
+      <input type="text" class="form-control" [(ngModel)]="searchTerm" placeholder="🔍 Cerca un post..." (input)="filterPosts()">
+    </div>
+    <button class="btn btn-danger ms-2 px-4" (click)="resetSearch()">Mostra Tutti</button>
+  </div>
+
   <!-- LISTA POST -->
-  <div *ngFor="let post of posts" class="post-item border-bottom p-3 d-flex align-items-center">
-    
-    <!-- SOLO QUESTA DIV APRE LA MODALE -->
+  <div *ngFor="let post of filteredPosts" class="post-item border-bottom p-3 d-flex align-items-center">
+
     <div class="user-avatar me-3" (click)="showPostDetail(post)">
       {{ getUserInitials(post.userId) }}
     </div>
 
-    <!-- IL CONTENUTO DEL POST NON APRIRÀ LA MODALE -->
     <div class="post-content">
       <h2 class="fw-bold text-danger">{{ post.title }}</h2>
       <p>{{ post.body }}</p>
       <p class="username">pubblicato da:
-        <a [routerLink]="['/user', post.userId]" (click)="$event.stopPropagation()" 
+        <a [routerLink]="['/user', post.userId]" (click)="$event.stopPropagation()"
           class="text-decoration-none text-primary fw-semibold">
           {{ getUser(post.userId)?.username }}
         </a>

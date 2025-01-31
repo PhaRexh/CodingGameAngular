@@ -25,7 +25,7 @@
   animation: fadeIn 0.3s ease-in-out;
 }
 
-/* ✅ Header della modale con titolo e bottone */
+/* Header della modale con titolo e bottone */
 .modal-header {
   display: flex;
   justify-content: space-between;
@@ -37,12 +37,12 @@
   position: relative;
 }
 
-/* ✅ Effetto hover */
+/* Effetto hover */
 .btn-close-custom:hover {
   background: darkred;
 }
 
-/* ✅ Centra il testo all'interno della modale */
+/* Centra il testo all'interno della modale */
 .modal-body {
   text-align: center;
 }
