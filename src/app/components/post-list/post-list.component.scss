@@ -19,6 +19,16 @@
     border-bottom: 1px solid #eeeeee;
     padding: 12px;
   }
+
+  .post-item {
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .post-item:hover {
+    background: rgba(255, 82, 82, 0.1); /* Effetto hover */
+  }
+  
   
   .user-avatar {
     width: 50px;

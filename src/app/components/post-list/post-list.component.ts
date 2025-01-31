@@ -16,7 +16,7 @@ export class PostListComponent implements OnInit {
   selectedPost?: Post;
   selectedUser?: User;
 
-  constructor(private postService: PostService, private userService: UserService) {}
+  constructor(private postService: PostService, private userService: UserService) { }
 
   ngOnInit(): void {
     this.postService.getPosts().subscribe(posts => {
@@ -36,20 +36,23 @@ export class PostListComponent implements OnInit {
     const user = this.getUser(userId);
     if (!user || !user.name) return '';
 
-    const names = user.name.trim().split(" "); 
+    const names = user.name.trim().split(" ");
 
     if (names.length >= 2) {
-        return `${names[0][0].toUpperCase()}${names[1][0].toUpperCase()}`;
+      return `${names[0][0].toUpperCase()}${names[1][0].toUpperCase()}`;
     } else {
-        return names[0][0].toUpperCase(); 
+      return names[0][0].toUpperCase();
     }
-}
-
-  showPostDetail(post: Post) {
-    this.selectedPost = post;
-    this.selectedUser = this.getUser(post.userId);
   }
 
+  showPostDetail(post: Post) {
+    console.log("Post cliccato:", post);
+    this.selectedPost = post;
+    this.selectedUser = this.getUser(post.userId);
+  
+    console.log("Post selezionato:", this.selectedPost);
+  }
+  
   closeDetail() {
     this.selectedPost = undefined;
     this.selectedUser = undefined;

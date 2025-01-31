@@ -1,11 +1,15 @@
-<div class="modal-overlay" *ngIf="post">
-    <div class="modal-content">
-      <button class="close-btn" (click)="closeDetail()">✖</button>
-      <p class="author">
-        <strong>Post pubblicato da:</strong> {{ user?.name }} alias <strong>{{ user?.username }}</strong>
-      </p>
-      <h2>{{ post.title }}</h2>
-      <p>{{ post.body }}</p>
+<div class="modal-container">
+  <div class="modal-content">
+    <!-- ✅ Header con titolo e bottone di chiusura -->
+    <div class="modal-header">
+      <p>{{ user?.name }} alias {{ user?.username }}</p>
+      <button type="button" class="btn-close" aria-label="Chiudi" (click)="closeDetail()"></button>
+    </div>
+
+    <!-- ✅ Corpo della modale -->
+    <div class="modal-body">
+      <h2 class="text-danger fw-bold">{{ post?.title }}</h2>
+      <p>{{ post?.body }}</p>
     </div>
   </div>
-  
+</div>
